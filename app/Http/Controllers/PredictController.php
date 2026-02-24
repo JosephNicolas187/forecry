@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+
+class PredictController extends Controller
+{
+    public function predict(Request $request)
+    {
+        try {
+            $response = Http::post('http://127.0.0.1:9191/predict', [
+                'symbol'   => 'BTCUSDT',
+                'interval' => $request->interval,
+                'lookback' => $request->lookback,
+            ]);
+
+            $data = $response->json();
+
+            if (!isset($data['predicted_close'])) {
+                return back()->with('error', 'Response ML tidak valid');
+            }
+
+            return response()->json([
+                'predicted' => $data['predicted_close'],
+                'last' => $data['last_close'],
+                'interval' => $data['interval']
+            ]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Terjadi kesalahan'], 422);
+        }
+    }
+}
