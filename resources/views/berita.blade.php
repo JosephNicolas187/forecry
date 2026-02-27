@@ -142,7 +142,7 @@
                                     </div>
                                 @endforelse
                             </div>
-                            <div class="card-footer border-secondary custom-pagination mt-1">
+                            <div class="card-footer border-secondary custom-pagination my-1 text-white">
                                 {{ $news->links() }}
                             </div>
                         </div>
