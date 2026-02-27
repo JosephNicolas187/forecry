@@ -105,7 +105,7 @@
                                 <h5 class="mb-0">Berita Terkini</h5>
                             </div>
 
-                            <div class="list-group list-group-flush">
+                            <div class="list-group list-group-flush" style="max-height: 60vh; overflow-y: auto;">
                                 @forelse ($news as $item)
                                     <div class="list-group-item list-group-item-dark bg-body-tertiary text-white">
 
@@ -142,7 +142,7 @@
                                     </div>
                                 @endforelse
                             </div>
-                            <div class="card-footer border-secondary custom-pagination my-1">
+                            <div class="card-footer border-secondary custom-pagination py-1">
                                 {{ $news->links() }}
                             </div>
                         </div>
