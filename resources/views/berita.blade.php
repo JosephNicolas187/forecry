@@ -10,6 +10,7 @@
         .custom-pagination .pagination .page-item.active .page-link {
             background-color: #198754;
             border-color: #198754;
+            color: white;
         }
 
         .custom-pagination .pagination .page-link:hover {
@@ -100,7 +101,7 @@
                     </aside>
 
                     <section class="col-12 col-lg-9 p-0">
-                        <div class="card bg-body-tertiary border-secondary">
+                        <div class="card bg-body-tertiary border-secondary pb-0">
                             <div class="card-header border-secondary">
                                 <h5 class="mb-0">Berita Terkini</h5>
                             </div>
@@ -142,7 +143,7 @@
                                     </div>
                                 @endforelse
                             </div>
-                            <div class="card-footer border-secondary custom-pagination my-1 text-white">
+                            <div class="card-footer border-secondary custom-pagination my-1">
                                 {{ $news->links() }}
                             </div>
                         </div>
