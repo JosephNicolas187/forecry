@@ -107,7 +107,6 @@
                                 <label class="form-label small text-white-50">Interval</label>
                                 <select name="interval"
                                     class="form-select form-select-sm bg-dark text-white border-secondary">
-                                    <option value="15min">15 Menit</option>
                                     <option value="30min">30 Menit</option>
                                     <option value="1h">1 Jam</option>
                                     <option value="4h">4 Jam</option>

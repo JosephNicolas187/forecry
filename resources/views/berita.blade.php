@@ -42,12 +42,31 @@
 
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <label class="small text-white-50">Rentang Tanggal</label>
-                                    <input type="date" name="start_date" value="{{ request('start_date') }}"
-                                        class="form-control bg-body-tertiary border-secondary text-white mb-2">
+                                    <label class="small text-white-50">Rentang Waktu</label>
 
-                                    <input type="date" name="end_date" value="{{ request('end_date') }}"
-                                        class="form-control bg-body-tertiary border-secondary text-white">
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-7">
+                                            <input type="date" name="start_date" value="{{ request('start_date') }}"
+                                                class="form-control bg-body-tertiary border-secondary text-white">
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="time" name="start_time"
+                                                value="{{ request('start_time', '00:00') }}"
+                                                class="form-control bg-body-tertiary border-secondary text-white">
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-2">
+                                        <div class="col-7">
+                                            <input type="date" name="end_date" value="{{ request('end_date') }}"
+                                                class="form-control bg-body-tertiary border-secondary text-white">
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="time" name="end_time"
+                                                value="{{ request('end_time', '23:59') }}"
+                                                class="form-control bg-body-tertiary border-secondary text-white">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="mb-3">
