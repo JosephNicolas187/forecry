@@ -10,12 +10,16 @@
         .custom-pagination .pagination .page-item.active .page-link {
             background-color: #198754;
             border-color: #198754;
-            color: white !important;
         }
+
         .custom-pagination .pagination .page-link:hover {
             background-color: #198754;
             border-color: #198754;
             color: white;
+        }
+
+        .custom-pagination .pagination .page-link {
+            color: #fff;
         }
     </style>
 </head>
@@ -142,7 +146,7 @@
                                     </div>
                                 @endforelse
                             </div>
-                            <div class="card-footer border-secondary custom-pagination py-1">
+                            <div class="card-footer border-secondary custom-pagination mt-2">
                                 {{ $news->links() }}
                             </div>
                         </div>
