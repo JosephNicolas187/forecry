@@ -114,12 +114,12 @@
                                 </select>
                             </div>
 
-                            <!-- Lookback -->
+                            {{-- <!-- Lookback -->
                             <div class="mb-3">
                                 <label class="form-label small text-white-50">Lookback Window</label>
                                 <input type="number" name="lookback" value="60"
                                     class="form-control form-control-sm bg-dark text-white border-secondary">
-                            </div>
+                            </div> --}}
 
                             <!-- Tombol -->
                             <div class="d-grid">
