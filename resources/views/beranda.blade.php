@@ -111,6 +111,7 @@
         </div>
     </main>
     <x-footer></x-footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://widgets.tradingview-widget.com/w/id/tv-mini-chart.js"></script>
 @if(session('success'))
 <script>
