@@ -103,16 +103,14 @@
                             <li class="mb-3"><span class="text-success">●</span> LSTM untuk pola deret waktu</li>
                             <li class="mb-3"><span class="text-success">●</span> FinBERT untuk sentimen finansial</li>
                             <li class="mb-3"><span class="text-success">●</span> Integrasi data Binance & berita</li>
-                            <li class="mb-0"><span class="text-success">●</span> Ekspor hasil (CSV/XLSX)</li>
                         </ul>
                     </div>
-                    <div class="card-footer text-white-50 small">*Fitur demo — sesuaikan dengan modulmu.</div>
+                    <div class="card-footer text-white-50 small">*Fitur demo.</div>
                 </div>
             </div>
         </div>
     </main>
     <x-footer></x-footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://widgets.tradingview-widget.com/w/id/tv-mini-chart.js"></script>
 @if(session('success'))
 <script>

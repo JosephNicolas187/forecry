@@ -98,11 +98,11 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2">
                                 <i class="bi bi-cloud-arrow-down fs-3 text-success me-2"></i>
-                                <h5 class="mb-0">Ekspor & Integrasi</h5>
+                                <h5 class="mb-0">Berita Terbaru</h5>
                             </div>
                             <p class="text-white-75 mb-0">
-                                Unduh hasil prediksi (CSV/XLSX) dan integrasikan dengan pipeline analisismu.
-                                Endpoint sederhana tersedia untuk otomatisasi.
+                                Mengumpulkan dan menampilkan berita kripto terkini dari sumber terpercaya
+                                sebagai referensi informasi pasar dan pendukung analisis sentimen.
                             </p>
                         </div>
                     </div>
@@ -152,9 +152,8 @@
                             <div class="d-flex">
                                 <span class="badge rounded-pill text-bg-success me-3">4</span>
                                 <div>
-                                    <h6 class="mb-1">Prediksi & Ekspor</h6>
-                                    <p class="text-white-75 small mb-0">Gabungkan hasil, tampilkan chart & tabel, lalu
-                                        ekspor.</p>
+                                    <h6 class="mb-1">Hasil Prediksi</h6>
+                                    <p class="text-white-75 small mb-0">Menampilkan hasil prediksi harga secara informatif.</p>
                                 </div>
                             </div>
                         </div>
@@ -169,16 +168,16 @@
                 <div class="col-12 col-md-4">
                     <div class="card soft-card text-center h-100">
                         <div class="card-body">
-                            <div class="display-6 fw-bold">5+</div>
-                            <div class="text-white-50">Sumber Berita Terintegrasi</div>
+                            <div class="display-6 fw-bold">5</div>
+                            <div class="text-white-50">Sumber Berita Populer</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <div class="card soft-card text-center h-100">
                         <div class="card-body">
-                            <div class="display-6 fw-bold">10K+</div>
-                            <div class="text-white-50">Data Harga per Pasar</div>
+                            <div class="display-6 fw-bold">4</div>
+                            <div class="text-white-50">Jenis interval prediksi Bitcoin</div>
                         </div>
                     </div>
                 </div>
@@ -209,7 +208,7 @@
                             </h2>
                             <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq">
                                 <div class="accordion-body text-white-75">
-                                    Tidak. .LOGO adalah alat bantu analisis. Selalu lakukan riset mandiri.
+                                    Tidak. Forecry adalah alat bantu analisis menggunakan model LSTM-FinBert. Selalu lakukan riset mandiri.
                                 </div>
                             </div>
                         </div>
@@ -220,19 +219,8 @@
                             </h2>
                             <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
                                 <div class="accordion-body text-white-75">
-                                    Harga dari penyedia pasar kripto (mis. Binance). Berita dari media finansial
+                                    Harga dari penyedia pasar kripto Binance. Berita dari media finansial
                                     populer.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item bg-transparent border-secondary">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent text-white" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q3">Bisakah ekspor hasil?</button>
-                            </h2>
-                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
-                                <div class="accordion-body text-white-75">
-                                    Bisa. Ekspor CSV/XLSX untuk prediksi maupun tabel sentimen.
                                 </div>
                             </div>
                         </div>
@@ -258,7 +246,7 @@
                 class="soft-card rounded-3 p-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between">
                 <div class="mb-3 mb-md-0">
                     <h4 class="mb-1">Siap mencoba ForeCry?</h4>
-                    <p class="mb-0 text-white-50 small">Mulai dari data historismu sendiri dan lihat proyeksi harganya.
+                    <p class="mb-0 text-white-50 small">Lihatlah prediksi harganya.
                     </p>
                 </div>
                 <div class="d-flex gap-2">
