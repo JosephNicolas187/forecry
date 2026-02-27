@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Berita;
+use Carbon\Carbon;
 
 class SentimentController extends Controller
 {
@@ -45,11 +46,19 @@ class SentimentController extends Controller
         }
 
         if ($request->filled('start_date')) {
-            $query->whereDate('published_at_utc', '>=', $request->start_date);
+            $startDateTime = Carbon::parse(
+                $request->start_date . ' ' . ($request->start_time ?? '00:00')
+            )->subHours(7); // jika database UTC
+
+            $query->where('published_at_utc', '>=', $startDateTime);
         }
 
         if ($request->filled('end_date')) {
-            $query->whereDate('published_at_utc', '<=', $request->end_date);
+            $endDateTime = Carbon::parse(
+                $request->end_date . ' ' . ($request->end_time ?? '23:59')
+            )->subHours(7);
+
+            $query->where('published_at_utc', '<=', $endDateTime);
         }
 
         if ($request->filled('source')) {
