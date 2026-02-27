@@ -21,6 +21,10 @@
         .custom-pagination .pagination .page-link {
             color: #fff;
         }
+        .custom-pagination ul{
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 
@@ -146,7 +150,7 @@
                                     </div>
                                 @endforelse
                             </div>
-                            <div class="card-footer border-secondary custom-pagination mt-2">
+                            <div class="card-footer border-secondary custom-pagination">
                                 {{ $news->links() }}
                             </div>
                         </div>
