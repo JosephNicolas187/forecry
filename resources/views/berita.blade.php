@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Berita • .LOGO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-pagination .pagination .page-item.active .page-link {
+            background-color: #198754;
+            border-color: #198754;
+        }
+
+        .custom-pagination .pagination .page-link:hover {
+            background-color: #198754;
+            border-color: #198754;
+            color: white;
+        }
+    </style>
 </head>
 
 <body class="bg-dark text-white" data-bs-theme="dark">
@@ -130,10 +142,9 @@
                                     </div>
                                 @endforelse
                             </div>
-
-                        </div>
-                        <div class="card-footer border-secondary custom-pagination">
-                            {{ $news->links() }}
+                            <div class="card-footer border-secondary custom-pagination mt-1">
+                                {{ $news->links() }}
+                            </div>
                         </div>
                     </section>
                 </div>
