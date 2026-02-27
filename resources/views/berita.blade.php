@@ -10,9 +10,8 @@
         .custom-pagination .pagination .page-item.active .page-link {
             background-color: #198754;
             border-color: #198754;
-            color: white;
+            color: white !important;
         }
-
         .custom-pagination .pagination .page-link:hover {
             background-color: #198754;
             border-color: #198754;
@@ -101,12 +100,12 @@
                     </aside>
 
                     <section class="col-12 col-lg-9 p-0">
-                        <div class="card bg-body-tertiary border-secondary pb-0">
+                        <div class="card bg-body-tertiary border-secondary">
                             <div class="card-header border-secondary">
                                 <h5 class="mb-0">Berita Terkini</h5>
                             </div>
 
-                            <div class="list-group list-group-flush" style="max-height: 65vh; overflow-y: auto;">
+                            <div class="list-group list-group-flush">
                                 @forelse ($news as $item)
                                     <div class="list-group-item list-group-item-dark bg-body-tertiary text-white">
 
