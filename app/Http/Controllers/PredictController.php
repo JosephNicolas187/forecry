@@ -13,7 +13,7 @@ class PredictController extends Controller
             $response = Http::post('http://127.0.0.1:9191/predict', [
                 'symbol'   => 'BTCUSDT',
                 'interval' => $request->interval,
-                'lookback' => $request->lookback,
+                'lookback' => $this->getLookback($request->interval),
             ]);
 
             $data = $response->json();
@@ -30,5 +30,14 @@ class PredictController extends Controller
         } catch (\Exception $e) {
             return response()->json(['error' => 'Terjadi kesalahan'], 422);
         }
+    }
+
+    private function getLookback($interval)
+    {
+        return match ($interval) {
+            '30min' => 40,
+            '1h', '4h', '12h' => 20,
+            default => 60
+        };
     }
 }
