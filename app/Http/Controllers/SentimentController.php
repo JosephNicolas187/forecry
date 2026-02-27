@@ -65,7 +65,10 @@ class SentimentController extends Controller
             $query->whereIn('source', $request->source);
         }
 
-        $news = $query->orderBy('published_at_utc', 'desc')->limit(100)->get();
+        $news = $query
+            ->orderBy('published_at_utc', 'desc')
+            ->paginate(20)
+            ->withQueryString(); 
 
 
         return view('/berita', compact('news'));
