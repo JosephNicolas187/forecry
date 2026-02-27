@@ -130,9 +130,10 @@
                                     </div>
                                 @endforelse
                             </div>
-                            <div class="card-footer border-secondary">
-                                {{ $news->links() }}
-                            </div>
+
+                        </div>
+                        <div class="card-footer border-secondary custom-pagination">
+                            {{ $news->links() }}
                         </div>
                     </section>
                 </div>
