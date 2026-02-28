@@ -305,11 +305,11 @@
                 document.getElementById("predictResult").innerHTML = `
             <hr class="border-secondary">
             <div class="text-center">
-                <div class="fs-4 text-white-50 mb-1">
+                <div class="fs-4 fw-3 text-white mb-1">
                     Hasil Prediksi
                 </div>
                 <div class="small text-white-50">
-                    Last Close: ${Number(data.predicted_time).toFixed(2)}
+                    Prediksi untuk waktu: <br>${data.predicted_time}
                 </div>
                 <div class="fs-4 fw-bold ${color}">
                     ${Number(data.predicted_close).toFixed(2)}
