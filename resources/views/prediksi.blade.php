@@ -125,7 +125,7 @@
                             <div class="d-grid">
                                 @auth
                                     <!-- Jika sudah login -->
-                                    <button type="submit" name="mode" value="prev" class="btn fs-1 btn-outline-light mb-2">
+                                    <button type="submit" name="mode" value="prev" class="btn btn-outline-light mb-2">
                                         Prediksi Harga Sebelumnya
                                     </button>
                                     <button type="submit" name="mode" value="next" class="btn btn-success btn-sm">
