@@ -323,6 +323,9 @@
                 <div class="small text-white-50">
                     Interval: ${data.interval}
                 </div>
+                <div class="small text-white-50">
+                    Interval: ${data.mode}
+                </div>
             </div>
         `;
             } catch (err) {

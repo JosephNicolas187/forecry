@@ -14,7 +14,7 @@ class PredictController extends Controller
                 'symbol'   => 'BTCUSDT',
                 'interval' => $request->interval,
                 'lookback' => $this->getLookback($request->interval),
-                'mode'     => $request->mode ?? 'prev'
+                'mode'     => $request->mode ?? 'next'
             ]);
 
             $data = $response->json();
@@ -24,6 +24,7 @@ class PredictController extends Controller
             }
 
             return response()->json([
+                'mode' => $data['mode'],
                 'predicted_close' => $data['predicted_close'],
                 'predicted_time' => $data['predicted_time'],
                 'last_close' => $data['last_close'],
