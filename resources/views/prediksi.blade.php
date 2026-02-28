@@ -255,13 +255,26 @@
     </script> --}}
 
     <script>
+        let clickedButton = null;
+
+        // Tangkap tombol mana yang diklik
+        document.querySelectorAll('#predictForm button[type="submit"]').forEach(btn => {
+            btn.addEventListener("click", function() {
+                clickedButton = this;
+            });
+        });
+
         document.getElementById("predictForm").addEventListener("submit", async function(e) {
-            e.preventDefault(); // STOP reload halaman
+            e.preventDefault();
 
             const form = e.target;
             const formData = new FormData(form);
 
-            // Show loader
+            // 🔥 INI YANG PENTING
+            if (clickedButton) {
+                formData.set("mode", clickedButton.value);
+            }
+
             document.getElementById("predictLoader").classList.remove("d-none");
             document.getElementById("predictResult").innerHTML = "";
 
