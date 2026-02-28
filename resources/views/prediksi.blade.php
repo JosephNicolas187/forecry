@@ -125,7 +125,10 @@
                             <div class="d-grid">
                                 @auth
                                     <!-- Jika sudah login -->
-                                    <button type="submit" class="btn btn-success btn-sm">
+                                    <button type="submit" name="mode" value="prev" class="btn btn-outline-warning btn-sm">
+                                        Cek Akurasi (Close Sebelumnya)
+                                    </button>
+                                    <button type="submit" name="mode" value="next" class="btn btn-success btn-sm">
                                         Prediksi Harga
                                     </button>
                                 @endauth
@@ -288,11 +291,11 @@
                 let icon = "■",
                     label = "Stabil",
                     color = "text-secondary";
-                if (data.predicted > data.last) {
+                if (data.predicted_close > data.last_close) {
                     icon = "▲";
                     label = "Naik";
                     color = "text-success";
-                } else if (data.predicted < data.last) {
+                } else if (data.predicted_close < data.last_close) {
                     icon = "▼";
                     label = "Turun";
                     color = "text-danger";
@@ -302,14 +305,20 @@
                 document.getElementById("predictResult").innerHTML = `
             <hr class="border-secondary">
             <div class="text-center">
+                <div class="fs-4 text-white-50 mb-1">
+                    Hasil Prediksi
+                </div>
+                <div class="small text-white-50">
+                    Last Close: ${Number(data.predicted_time).toFixed(2)}
+                </div>
                 <div class="fs-4 fw-bold ${color}">
-                    ${Number(data.predicted).toFixed(2)}
+                    ${Number(data.predicted_close).toFixed(2)}
                 </div>
                 <div class="small ${color}">
                     ${icon} ${label}
                 </div>
                 <div class="small text-white-50">
-                    Last Close: ${Number(data.last).toFixed(2)}
+                    Last Close: ${Number(data.last_close).toFixed(2)}
                 </div>
                 <div class="small text-white-50">
                     Interval: ${data.interval}
