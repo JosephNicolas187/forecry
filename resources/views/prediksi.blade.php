@@ -125,7 +125,7 @@
                             <div class="d-grid">
                                 @auth
                                     <!-- Jika sudah login -->
-                                    <button type="submit" name="mode" value="prev" class="btn btn-outline-warning btn-sm">
+                                    <button type="submit" name="mode" value="prev" class="btn btn-outline-light flex-fill mb-2">
                                         Cek Akurasi (Close Sebelumnya)
                                     </button>
                                     <button type="submit" name="mode" value="next" class="btn btn-success btn-sm">
@@ -309,7 +309,7 @@
                     Hasil Prediksi
                 </div>
                 <div class="small text-white-50">
-                    Prediksi untuk waktu: <br>${data.predicted_time}
+                    ${data.predicted_time} UTC
                 </div>
                 <div class="fs-4 fw-bold ${color}">
                     ${Number(data.predicted_close).toFixed(2)}
