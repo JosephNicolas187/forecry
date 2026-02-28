@@ -24,7 +24,6 @@ class PredictController extends Controller
             }
 
             return response()->json([
-                // 'mode' => $data['mode'],
                 'predicted_close' => $data['predicted_close'],
                 'predicted_time' => $data['predicted_time'],
                 'last_close' => $data['last_close'],

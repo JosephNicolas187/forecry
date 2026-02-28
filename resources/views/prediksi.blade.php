@@ -308,6 +308,9 @@
                 document.getElementById("predictResult").innerHTML = `
                 <hr class="border-secondary">
                 <div class="text-center">
+                    <div class="fs-4 fw-3 text-white mb-1">
+                        Hasil Prediksi
+                    </div>
                     <div class="small text-white-50">
                         Mode: ${clickedButton.value}
                     </div>
