@@ -289,21 +289,12 @@
 
                 const data = await response.json();
 
-                // Hide loader
                 document.getElementById("predictLoader").classList.add("d-none");
 
-                if (data.error) {
-                    document.getElementById("predictResult").innerHTML = `
-                <hr class="border-secondary">
-                <div class="alert alert-danger small mb-0">${data.error}</div>
-            `;
-                    return;
-                }
-
-                // Tentukan status naik / turun / stabil
                 let icon = "■",
                     label = "Stabil",
                     color = "text-secondary";
+
                 if (data.predicted_close > data.last_close) {
                     icon = "▲";
                     label = "Naik";
@@ -314,39 +305,35 @@
                     color = "text-danger";
                 }
 
-                // Tampilkan hasil tanpa reload
                 document.getElementById("predictResult").innerHTML = `
-            <hr class="border-secondary">
-            <div class="text-center">
-                <div class="fs-4 fw-3 text-white mb-1">
-                    Hasil Prediksi
+                <hr class="border-secondary">
+                <div class="text-center">
+                    <div class="small text-white-50">
+                        Mode: ${clickedButton.value}
+                    </div>
+                    <div class="small text-white-50">
+                        ${data.predicted_time} UTC
+                    </div>
+                    <div class="fs-4 fw-bold ${color}">
+                        ${Number(data.predicted_close).toFixed(2)}
+                    </div>
+                    <div class="small ${color}">
+                        ${icon} ${label}
+                    </div>
+                    <div class="small text-white-50">
+                        Last Close: ${Number(data.last_close).toFixed(2)}
+                    </div>
                 </div>
-                <div class="small text-white-50">
-                    ${data.predicted_time} UTC
-                </div>
-                <div class="fs-4 fw-bold ${color}">
-                    ${Number(data.predicted_close).toFixed(2)}
-                </div>
-                <div class="small ${color}">
-                    ${icon} ${label}
-                </div>
-                <div class="small text-white-50">
-                    Last Close: ${Number(data.last_close).toFixed(2)}
-                </div>
-                <div class="small text-white-50">
-                    Interval: ${data.interval}
-                </div>
-                <div class="small text-white-50">
-                    Interval: ${data.mode}
-                </div>
-            </div>
-        `;
+            `;
+
             } catch (err) {
                 document.getElementById("predictLoader").classList.add("d-none");
                 document.getElementById("predictResult").innerHTML = `
-            <hr class="border-secondary">
-            <div class="alert alert-danger small mb-0">Error saat memprediksi!</div>
-        `;
+                <hr class="border-secondary">
+                <div class="alert alert-danger small mb-0">
+                    Error saat memprediksi!
+                </div>
+            `;
             }
         });
     </script>
