@@ -15,7 +15,7 @@
         <div class="container text-center position-relative z-3">
             <img src="{{ asset('images/logo.png') }}" alt="ForeCry Logo" class="img-fluid"
                 style="width: clamp(120px, 25vw, 280px); height: auto;">
-            <p class="mt-3 mb-0 text-white-50">
+            <p class="mt-0 text-white-50">
                 ForeCry adalah sebuah sistem dengan implementasi <span class="fw-semibold">LSTM-FinBERT</span><br>
                 untuk memprediksi harga masa depan.
             </p>
